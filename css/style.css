@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.splash {
+  background: #FF6900;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  vertical-align: bottom;
+  color: #FEF5DC;
+}
+
+.order {
+  background-color: #111;
+  color: #eee;
+  height: 100%;
+}
