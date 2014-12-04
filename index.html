@@ -12,11 +12,33 @@
 <body>
   <input type="text" ng-model="hello">
 
-  <div class="{{ hello }}">
-    {{ hello }}
+<!--   <div class="{{ hello }}" ng-show="false">
+    {{ hello | currency  }}
   </div>
 
-  <div ng-controller="AppCrtl"></div>
+  <div ng-controller="AppCtrl">
+    {{ title }}
+    <ul>
+      <li ng-repeat="hero in heroes">
+        {{ hero }}
+      </li>
+      <div class="button" ng-click="buttonClicked()">
+        Click Me
+      </div>
+    </ul>
+  </div> -->
+
+  <div class="container">
+    <div class="header" ng-controller="HeaderCtrl">
+      {{ title }
+    </div>
+    <div class="sidebar" ng-controller="SidebarCtrl">
+      {{ title }
+    </div>
+    <div class="messages" ng-controller="MessagesCtrl">
+      {{ title }}
+    </div>
+  </div>
 
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
