@@ -10,7 +10,7 @@
   <!-- endinject -->
 </head>
 <body>
-  <input type="text" ng-model="hello">
+  <!-- <input type="text" ng-model="hello"> -->
 
 <!--   <div class="{{ hello }}" ng-show="false">
     {{ hello | currency  }}
@@ -30,12 +30,14 @@
 
   <div class="container">
     <div class="header" ng-controller="HeaderCtrl">
-      {{ title }
+      {{ title }}
     </div>
     <div class="sidebar" ng-controller="SidebarCtrl">
-      {{ title }
-    </div>
-    <div class="messages" ng-controller="MessagesCtrl">
+      {{ title }}
+      <ul>
+        <li ng-repeat="user in users">{{ user.nickname }}</li>
+      </ul>
+    </div><div class="messages" ng-controller="MessagesCtrl">
       {{ title }}
     </div>
   </div>

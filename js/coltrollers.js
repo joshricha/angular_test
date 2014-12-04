@@ -15,10 +15,27 @@ angular.module('hipstrchat')
   .controller('HeaderCtrl', function($scope) {
     $scope.title = "This is the header";
   })
-  .controller('SidebarCtrl', function($scope) {
+  .controller('SidebarCtrl', function($scope, $http) {
     $scope.title = "This is the sidebar";
-  })
-  .controller('MessagesCtrl', function($scope) {
-    $scope.title = "This is the messages";
-  })
 
+
+    var getUsers = function() {
+      $http.get('http://hipstrchat.herokuapp.com/users')
+        .success(function(data) {
+          console.log(data);
+          $scope.users = data;
+        })
+        .error(function() {
+          console.log('error', data);
+        })
+    };
+
+    $scope.users = getUsers();
+  })
+  .controller('MessagesCtrl', function($scope, $http) {
+    $scope.title = "This is the messages";
+    $scope.messages = [];
+      $http.get('http://hipstrchat.herokuapp.com/rooms/1')
+        .success(function(data) {
+          $scope.messages = data;
+  })
