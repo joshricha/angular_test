@@ -46,7 +46,14 @@ angular.module('hipstrchat')
     };
     getMessages();
 
+    setInterval(function() {
+      console.log('getting messages');
+      getMessages();
+    }, 2000);
+
     $scope.sendMessage = function (form) {
+      form.$setPristine();
+      $scope.data.text = '';
       var req = {
                  method: 'POST',
                  url: 'http://hipstrchat.herokuapp.com/rooms/1/messages',

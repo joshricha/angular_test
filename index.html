@@ -41,7 +41,7 @@
     </div><div class="messages" ng-controller="MessagesCtrl">
       {{ title }}
       <div ng-repeat="message in messages">
-        {{message.text}}
+        {{message.user_id}} {{message.text}}
       </div>
       <div class="new-message">
         <form name="newMsgForm" ng-submit="sendMessage(newMsgForm)">
