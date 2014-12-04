@@ -32,7 +32,7 @@ var notifyLiveReload = function (event) {
 
 gulp.task('sass', function() {
     return gulp.src('sass/style.scss')
-      .pipe(sass({ style: 'expanded', "sourcemap=none": false  }))
+      .pipe(sass({ style: 'expanded', "sourcemap=none": true  }))
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
       .pipe(gulp.dest('css'))
       .pipe(rename({suffix: '.min'}))

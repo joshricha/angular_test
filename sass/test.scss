@@ -1,8 +1,8 @@
-$dark: #bf0000;
-$med: #777;
-$light: #bbb;
-$highlight: #ddd;
 $accent: #bf0000;
+$highlight: #ddd;
+$light: #bbb;
+$med: #777;
+$dark: #333;
 
 $header-height: 10%;
 $main-height: (100% - $header-height);
@@ -11,50 +11,31 @@ $left-width: 15%;
 $right-width: (100% - $left-width);
 
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  height: 100%;
+ margin: 0;
+ padding: 0;
+ border: 0;
+ box-sizing: border-box;
+ // height: 100%
 }
 
-body {
+html, body {
   background-color: white;
   font-family: Helvetica, sans-serif;
-}
-
-.alert {
-  background: #bf0000;
-  color: #fff;
-}
-
-.button {
-  color:white;
-  background-color: tomato;
-  display: inline-block;
-  padding: 1em;
-  border: 1px solid red;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background-color: #000;
-  color: white;
+  // height: 100%;
 }
 
 .header {
   width: 100%;
-  height: 5em;
+  height: $header-height;
   background: $dark;
 }
 
 .sidebar {
-  width: 20%;
+  width: $left-width;
   display: inline-block;
   height: $main-height;
   background: $med;
 }
-
 .messages {
   width: $right-width;
   display: inline-block;
