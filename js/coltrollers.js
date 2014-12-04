@@ -1,2 +1,4 @@
 angualr.module('hipstrchat')
-  .controller('AppCtrl');
+  .controller('AppCtrl', function() {
+  console.log('loaded');
+  });
