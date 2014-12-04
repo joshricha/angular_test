@@ -1,7 +1,7 @@
 {
-  "name": "mrburger",
+  "name": "hipsterchat",
   "version": "0.1.0",
-  "description": "M Burger",
+  "description": "Before it was cool",
   "main": "gulpfile.js",
   "dependencies": {
     "event-stream": "^3.1.7",

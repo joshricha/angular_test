@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mr-burger">
+<html lang="en" ng-app="hipstrchat">
 <head>
   <meta charset="UTF-8">
-  <title>Mr Burger</title>
+  <title>HipsterChat</title>
   <!-- bower:css -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -10,16 +10,18 @@
   <!-- endinject -->
 </head>
 <body>
-  <div class="container" ui-view></div>
-  <!-- bower:js -->
+  <input type="text" ng-model="hello">
+
+  <div class="{{ hello }}">
+    {{ hello }}
+  </div>
+
+
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
-  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endinject -->
   <!-- inject:js -->
   <script src="/js/app.js"></script>
-  <script src="/js/controllers/order-controller.js"></script>
-  <script src="/js/controllers/splash-controller.js"></script>
   <!-- endinject -->
 </body>
 </html>
